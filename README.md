@@ -77,10 +77,6 @@ Application Load Balancer (HTTP:80)
 * `aws_lb_listener`
 * Target group attachments
 
-### Storage
-
-* `aws_s3_bucket`
-
 ---
 
 ## 🔧 Prerequisites
@@ -154,28 +150,7 @@ Traffic will be load-balanced between both EC2 instances.
 
 To clean up all resources:
 
-```bash
 terraform destroy
-```
-
----
-
-## 🔒 Security Notes
-
-* SSH is open to the world (`0.0.0.0/0`) → restrict in production
-* S3 bucket name must be **globally unique**
-* Use IAM roles instead of access keys where possible
-
----
-
-## 📌 Improvements (Future Scope)
-
-* HTTPS using ACM certificate
-* Auto Scaling Group (ASG)
-* Private subnets with NAT Gateway
-* Remote backend (S3 + DynamoDB)
-* Modular Terraform structure
-
 ---
 
 ## 👩‍💻 Author
