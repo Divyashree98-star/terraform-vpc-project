@@ -70,10 +70,6 @@ resource "aws_vpc_security_group_egress_rule" "outbound" {
   ip_protocol       = "-1" # semantically equivalent to all ports
 }
 
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-s3-global-divu-143"
-}
-
 resource "aws_instance" "web1" {
   ami                    = "ami-02b8269d5e85954ef"
   instance_type          = "t3.micro"
